@@ -19,7 +19,7 @@ const ResCategory = ({ data }) => {
           <span className="font-bold text-lg">{data.title}</span>
           <ChevronDownIcon className="w-7" />
         </div>
-        {showItems && <ItemList items={data.itemCards} />}
+        {showItems && <ItemList items={data.itemCards} showButton={true} />}
       </div>
     </div>
   );

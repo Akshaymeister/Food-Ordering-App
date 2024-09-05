@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 import {
   HomeIcon,
   BuildingOfficeIcon,
-  GlobeAmericasIcon,
   PhoneIcon,
   ShoppingBagIcon,
 } from "@heroicons/react/16/solid";
 import logo from "../img/logo.png";
-import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnName, setbtnName] = useState("login");
   const data = useContext(UserContext);
-  console.log(data);
+
+  const cartItems = useSelector((store) => store.cart.items);
 
   return (
     <div className="flex justify-around shadow-sm  p-4 items-center">
@@ -42,9 +42,11 @@ const Header = () => {
               Contact Us
             </Link>
           </li>
-          <li className="flex gap-2 px-6 py-3 text-white  bg-orange-400 hover:bg-orange-600 rounded-xl cursor-pointer">
-            <ShoppingBagIcon className="w-4" />
-            Cart
+          <li className=" px-6 py-3 text-white  bg-orange-400 hover:bg-orange-600 rounded-xl cursor-pointer">
+            <Link className="flex gap-2" to="/cart">
+              <ShoppingBagIcon className="w-4" />
+              Cart ({cartItems.length})
+            </Link>
           </li>
         </ul>
       </div>
