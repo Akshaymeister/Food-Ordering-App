@@ -59,18 +59,6 @@ const Section = () => {
             Search
           </button>
         </div>
-        {/* <div>
-          <button
-            onClick={() => {
-              setfilteredRest(
-                listRes.filter((res) => res.info.avgRating >= 4.5)
-              );
-            }}
-            className="px-2 py-2 bg-gray-200 hover:bg-gray-400 color m-4 rounded-lg"
-          >
-            Top rated Restaurants
-          </button>
-        </div> */}
       </div>
       <div className="res-container mx-48 grid sm:grid-cols-2 lg:grid-cols-4  justify-items-center">
         {filteredRest.map((res) => (

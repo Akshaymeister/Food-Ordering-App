@@ -10,7 +10,6 @@ const ResCategory = ({ data }) => {
 
   return (
     <div>
-      {/* Header */}
       <div className="w-6/12 mx-auto my-4 bg-slate-50 shadow-sm p-4">
         <div
           className="flex justify-between cursor-pointer"

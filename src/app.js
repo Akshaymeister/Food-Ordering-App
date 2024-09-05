@@ -11,8 +11,6 @@ import RestaurantMenu from "./components/RestraurantMenu";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
 
-const Grocery = lazy(() => import("./components/Grocery"));
-
 const AppLayout = () => {
   return (
     <Provider store={appStore}>
@@ -40,14 +38,6 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
-      },
-      {
-        path: "/grocery",
-        element: (
-          <Suspense fallback={<h1>Loading...</h1>}>
-            <Grocery />
-          </Suspense>
-        ),
       },
       {
         path: "/restaurant/:resId",

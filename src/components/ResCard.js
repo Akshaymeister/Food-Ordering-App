@@ -28,16 +28,4 @@ const ResCard = ({ data }) => {
   );
 };
 
-//higher order components
-export const withPromotedLabel = (ResCard) => {
-  return (props) => {
-    return (
-      <div>
-        <label>Promoted</label>
-        <ResCard {...props} />
-      </div>
-    );
-  };
-};
-
 export default ResCard;
